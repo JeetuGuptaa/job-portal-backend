@@ -19,7 +19,7 @@ const corsOptions = {
   origin: [process.env.ORIGIN_URL, "http://localhost:5173", "*"],
   credentials: true,
 };
-app.use(cors(corsOptions));
+app.use(cors());
 //api
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoutes);
