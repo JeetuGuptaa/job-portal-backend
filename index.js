@@ -16,10 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 const corsOptions = {
-  origin: [process.env.ORIGIN_URL, "http://localhost:5173", "*"],
+  origin: [process.env.ORIGIN_URL, "http://localhost:5173", "*", "https://job-portal-backend-kd3p.onrender.com/"],
   credentials: true,
 };
-app.use(cors());
+app.use(cors(corsOptions));
 //api
 app.use("/api/v1/user", userRoute);
 app.use("/api/v1/company", companyRoutes);
